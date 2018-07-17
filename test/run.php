@@ -11,25 +11,67 @@ require_once __DIR__ . '/../src/functions.php';
  */
 
 $assertions = [
-    'array-first-is-null' => [
+    'array-first-null' => [
         function () {
             return array_first([]);
-        }, false
+        }, null
     ],
 
-    'array-last-is-null' => [
+    'array-last-null' => [
         function () {
             return array_last([]);
         }, null
+    ],
+
+    'array-first-numeric' => [
+        function () {
+            return array_first([
+                0 => 'foo',
+                1 => 'bar',
+                2 => 'bam'
+            ]);
+        }, [0, 'foo']
+    ],
+
+    'array-last-numeric' => [
+        function () {
+            return array_last([
+                0 => 'foo',
+                1 => 'bar',
+                2 => 'bam'
+            ]);
+        }, [2, 'bam']
+    ],
+
+    'array-first-associative' => [
+        function () {
+            return array_first([
+                'foo' => 0,
+                'bar' => 1,
+                'bam' => 2
+            ]);
+        }, ['foo', 0]
+    ],
+
+    'array-last-associative' => [
+        function () {
+            return array_last([
+                'foo' => 0,
+                'bar' => 1,
+                'bam' => 2
+            ]);
+        }, ['bam', 2]
     ]
 ];
 
 foreach ($assertions as $name => $assertion) {
     [$callback, $expectation] = $assertion;
 
-    echo "Running $name" . PHP_EOL;
+    echo "[ $name ] Running... ";
 
     if ($callback() !== $expectation) {
-        exit( "$name failed!" . PHP_EOL );
+        exit( "failed!" . PHP_EOL );
     }
+
+    echo "success!" . PHP_EOL;
 }
