@@ -1,0 +1,18 @@
+{
+    "name": "p810/array-fl",
+    "description": "Provides a consolidated polyfill for array_key_first(), array_key_last(), and the unapproved functions array_value_first() and array_value_last().",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton Bice",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": ["src/functions.php"]
+    },
+    "scripts": {
+        "test": "/usr/bin/env php ./test/run.php"
+    }
+}
