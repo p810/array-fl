@@ -2,6 +2,17 @@
 
 > Provides a consolidated polyfill for `array_key_first()`, `array_key_last()`, and the unapproved functions `array_value_first()` and `array_value_last()`.
 
+## Installation
+
+This package is available via Packagist:
+
+```
+composer require p810/array-fl
+```
+
+You can also download it directly from GitHub.
+Latest stable tag: [v1.0.0](https://github.com/p810/array-fl/tree/1.0.0)
+
 ## API
 
 #### `array_first(array $array): ?array`
@@ -27,3 +38,8 @@ If `$array` is not an array or is empty, `null` is returned.
 #### `array_value_last(array $array): mixed`
 Returns the value of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
+
+## Tests
+
+Run `composer run test` to run a set of unit tests for these functions.
+No external dependency (e.g. PHPUnit) is required.
