@@ -37,7 +37,55 @@ $assertions = [
         'foo' => 0,
         'bar' => 1,
         'bam' => 2
-    ]) === ['bam', 2]
+    ]) === ['bam', 2],
+
+    'array-key-first-numeric' => array_key_first([
+        0 => 'foo',
+        1 => 'bar',
+        2 => 'bam'
+    ]) === 0,
+
+    'array-key-last-numeric' => array_key_last([
+        0 => 'foo',
+        1 => 'bar',
+        2 => 'bam'
+    ]) === 2,
+
+    'array-key-first-associative' => array_key_first([
+        'foo' => 0,
+        'bar' => 1,
+        'bam' => 2
+    ]) === 'foo',
+    
+    'array-key-last-associative' => array_key_last([
+        'foo' => 0,
+        'bar' => 1,
+        'bam' => 2
+    ]) === 'bam',
+
+    'array-value-first-numeric' => array_value_first([
+        0 => 'foo',
+        1 => 'bar',
+        2 => 'bam'
+    ]) === 'foo',
+
+    'array-value-last-numeric' => array_value_last([
+        0 => 'foo',
+        1 => 'bar',
+        2 => 'bam'
+    ]) === 'bam',
+
+    'array-value-first-associative' => array_value_first([
+        'foo' => 0,
+        'bar' => 1,
+        'bam' => 2
+    ]) === 0,
+
+    'array-value-last-associative' => array_value_last([
+        'foo' => 0,
+        'bar' => 1,
+        'bam' => 2
+    ]) === 2
 ];
 
 foreach ($assertions as $name => $assertion) {
