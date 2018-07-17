@@ -53,3 +53,23 @@ function array_key_last($array) {
 
     return $key[0];
 }
+
+function array_value_first($array) {
+    $value = array_first($array);
+
+    if ($value === null) {
+        return null;
+    }
+
+    return $value[1];
+}
+
+function array_value_last($array) {
+    $value = array_last($array);
+
+    if ($value === null) {
+        return null;
+    }
+
+    return $value[1];
+}
