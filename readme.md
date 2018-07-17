@@ -12,10 +12,18 @@ If `$array` is not an array or is empty, `null` is returned.
 Returns a tuple containing the key and value of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_key_first(array $array): mixed`
+#### `array_key_first(array $array): int|string`
 Returns the key of the first item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_key_last(array $array): mixed`
+#### `array_key_last(array $array): int|string`
 Returns the key of the last item in `$array`.
+If `$array` is not an array or is empty, `null` is returned.
+
+#### `array_value_first(array $array): mixed`
+Returns the value of the first item in `$array`.
+If `$array` is not an array or is empty, `null` is returned.
+
+#### `array_value_last(array $array): mixed`
+Returns the value of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
