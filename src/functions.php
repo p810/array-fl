@@ -19,7 +19,7 @@ function array_first($array) {
 
     $key = key($array);
 
-    return [$key, $array[$key]];
+    return array($key, $array[$key]);
 }
 
 function array_last($array) {
@@ -31,7 +31,7 @@ function array_last($array) {
 
     $key = key($array);
 
-    return [$key, $array[$key]];
+    return array($key, $array[$key]);
 }
 
 function array_key_first($array) {
