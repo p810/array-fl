@@ -11,7 +11,7 @@ composer require p810/array-fl
 ```
 
 You can also download it directly from GitHub.
-Latest stable tag: [v1.0.0](https://github.com/p810/array-fl/tree/1.0.0)
+Latest stable tag: [1.1.0](https://github.com/p810/array-fl/archive/1.1.0.zip)
 
 ## API
 
