@@ -10,66 +10,78 @@
  * will work with PHP <= 7.2.1.
  */
 
-function array_first($array) {
-    if (!is_array($array) || empty($array)) {
-        return null;
+if (!function_exists('array_first')) {
+    function array_first($array) {
+        if (!is_array($array) || empty($array)) {
+            return null;
+        }
+    
+        reset($array);
+    
+        $key = key($array);
+    
+        return array($key, $array[$key]);
     }
-
-    reset($array);
-
-    $key = key($array);
-
-    return array($key, $array[$key]);
 }
 
-function array_last($array) {
-    if (!is_array($array) || empty($array)) {
-        return null;
+if (!function_exists('array_last')) {
+    function array_last($array) {
+        if (!is_array($array) || empty($array)) {
+            return null;
+        }
+    
+        end($array);
+    
+        $key = key($array);
+    
+        return array($key, $array[$key]);
     }
-
-    end($array);
-
-    $key = key($array);
-
-    return array($key, $array[$key]);
 }
 
-function array_key_first($array) {
-    $key = array_first($array);
-
-    if ($key === null) {
-        return null;
+if (!function_exists('array_key_first')) {
+    function array_key_first($array) {
+        $key = array_first($array);
+    
+        if ($key === null) {
+            return null;
+        }
+    
+        return $key[0];
     }
-
-    return $key[0];
 }
 
-function array_key_last($array) {
-    $key = array_last($array);
-
-    if ($key === null) {
-        return null;
+if (!function_exists('array_key_last')) {
+    function array_key_last($array) {
+        $key = array_last($array);
+    
+        if ($key === null) {
+            return null;
+        }
+    
+        return $key[0];
     }
-
-    return $key[0];
 }
 
-function array_value_first($array) {
-    $value = array_first($array);
-
-    if ($value === null) {
-        return null;
+if (!function_exists('array_value_first')) {
+    function array_value_first($array) {
+        $value = array_first($array);
+    
+        if ($value === null) {
+            return null;
+        }
+    
+        return $value[1];
     }
-
-    return $value[1];
 }
 
-function array_value_last($array) {
-    $value = array_last($array);
-
-    if ($value === null) {
-        return null;
+if (!function_exists('array_value_last')) {
+    function array_value_last($array) {
+        $value = array_last($array);
+    
+        if ($value === null) {
+            return null;
+        }
+    
+        return $value[1];
     }
-
-    return $value[1];
 }
