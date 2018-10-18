@@ -10,9 +10,9 @@
  * will work with PHP <= 7.2.1.
  */
 
-if (!function_exists('array_first')) {
+if (! function_exists('array_first')) {
     function array_first($array) {
-        if (!is_array($array) || empty($array)) {
+        if (! is_array($array) || empty($array)) {
             return null;
         }
     
@@ -24,9 +24,9 @@ if (!function_exists('array_first')) {
     }
 }
 
-if (!function_exists('array_last')) {
+if (! function_exists('array_last')) {
     function array_last($array) {
-        if (!is_array($array) || empty($array)) {
+        if (! is_array($array) || empty($array)) {
             return null;
         }
     
@@ -38,50 +38,34 @@ if (!function_exists('array_last')) {
     }
 }
 
-if (!function_exists('array_key_first')) {
+if (! function_exists('array_key_first')) {
     function array_key_first($array) {
         $key = array_first($array);
-    
-        if ($key === null) {
-            return null;
-        }
-    
-        return $key[0];
+
+        return is_null($key) ? null : $key[0];
     }
 }
 
-if (!function_exists('array_key_last')) {
+if (! function_exists('array_key_last')) {
     function array_key_last($array) {
         $key = array_last($array);
-    
-        if ($key === null) {
-            return null;
-        }
-    
-        return $key[0];
+
+        return is_null($key) ? null : $key[0];
     }
 }
 
-if (!function_exists('array_value_first')) {
+if (! function_exists('array_value_first')) {
     function array_value_first($array) {
         $value = array_first($array);
-    
-        if ($value === null) {
-            return null;
-        }
-    
-        return $value[1];
+
+        return is_null($value) ? null : $value[1];
     }
 }
 
-if (!function_exists('array_value_last')) {
+if (! function_exists('array_value_last')) {
     function array_value_last($array) {
         $value = array_last($array);
-    
-        if ($value === null) {
-            return null;
-        }
-    
-        return $value[1];
+
+        return is_null($value) ? null : $value[1];
     }
 }
