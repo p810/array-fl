@@ -11,31 +11,31 @@ composer require p810/array-fl
 ```
 
 You can also download it directly from GitHub.
-Latest stable tag: [1.1.0](https://github.com/p810/array-fl/archive/1.1.0.zip)
+Latest stable tag: [1.2.0](https://github.com/p810/array-fl/archive/1.2.0.zip)
 
 ## API
 
-#### `array_first(array $array): ?array`
+#### `array_first(array $array): null|array`
 Returns a tuple containing the key and value of the first item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_last(array $array): ?array`
+#### `array_last(array $array): null|array`
 Returns a tuple containing the key and value of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_key_first(array $array): ?int|string`
+#### `array_key_first(array $array): null|int|string`
 Returns the key of the first item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_key_last(array $array): ?int|string`
+#### `array_key_last(array $array): null|int|string`
 Returns the key of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_value_first(array $array): mixed`
+#### `array_value_first(array $array): null|mixed`
 Returns the value of the first item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
-#### `array_value_last(array $array): mixed`
+#### `array_value_last(array $array): null|mixed`
 Returns the value of the last item in `$array`.
 If `$array` is not an array or is empty, `null` is returned.
 
