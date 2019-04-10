@@ -11,6 +11,12 @@
  */
 
 if (! function_exists('array_first')) {
+    /**
+     * Returns a tuple containing the first key and value from an array.
+     * 
+     * @param array $array
+     * @return null|array<int|string,mixed>
+     */
     function array_first($array) {
         if (! is_array($array) || empty($array)) {
             return null;
@@ -25,6 +31,12 @@ if (! function_exists('array_first')) {
 }
 
 if (! function_exists('array_last')) {
+    /**
+     * Returns a tuple containing the last key and value from an array.
+     * 
+     * @param array $array
+     * @return null|array<int|string,mixed>
+     */
     function array_last($array) {
         if (! is_array($array) || empty($array)) {
             return null;
@@ -39,33 +51,71 @@ if (! function_exists('array_last')) {
 }
 
 if (! function_exists('array_key_first')) {
+    /**
+     * Returns the first key from an array.
+     * 
+     * @param array $array
+     * @return null|int|string
+     */
     function array_key_first($array) {
         $key = array_first($array);
 
-        return is_null($key) ? null : $key[0];
+        if (! $key) {
+            return null;
+        }
+
+        return $key[0];
     }
 }
 
 if (! function_exists('array_key_last')) {
+    /**
+     * Returns the last key from an array.
+     * 
+     * @param array $array
+     * @return null|int|string
+     */
     function array_key_last($array) {
         $key = array_last($array);
 
-        return is_null($key) ? null : $key[0];
+        if (! $key) {
+            return null;
+        }
+
+        return $key[0];
     }
 }
 
 if (! function_exists('array_value_first')) {
+    /**
+     * Returns the first value from an array.
+     * 
+     * @return null|mixed
+     */
     function array_value_first($array) {
         $value = array_first($array);
 
-        return is_null($value) ? null : $value[1];
+        if (! $value) {
+            return null;
+        }
+
+        return $value[1];
     }
 }
 
 if (! function_exists('array_value_last')) {
+    /**
+     * Returns the last value from an array.
+     * 
+     * @return null|mixed
+     */
     function array_value_last($array) {
         $value = array_last($array);
 
-        return is_null($value) ? null : $value[1];
+        if (! $value) {
+            return null;
+        }
+
+        return $value[1];
     }
 }
